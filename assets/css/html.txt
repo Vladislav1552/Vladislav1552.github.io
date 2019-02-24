@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>TechShop</title>
+
+
+
+  <!-- owlcarousel CSS -->
+  <link rel="stylesheet" href="assets/plugin/OwlCarousel2-2.3.4/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/plugin/OwlCarousel2-2.3.4/owl.theme.default.min.css">
+  <!-- end owlcarousel CSS -->
+
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+    rel="stylesheet">
+  <!-- end fonts-->
+
+  <!--Font Awesome Icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!--icons-->
+  <link rel="stylesheet" href="assets/css/style-icons.css">
+  <!--end icons-->
+  <!--end Font Awesome Icons-->
+
+
+  <!--CSS convector-->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style-media.css">
+  <!-- end CSS-->
+
+  <!--CSS style-ui-->
+  <link rel="stylesheet" href="assets/css/style-ui.css">
+  <!-- end CSS style-ui-->
+
+  <!--CSS style-menu-->
+  <link rel="stylesheet" href="assets/css/style-menu.css">
+  <link rel="stylesheet" href="assets/css/style-menu-media.css">
+  <!-- end CSS style-menu-->
+
+  <!--CSS style-product-item-->
+  <link rel="stylesheet" href="assets/css/product-item.css">
+  <!-- end CSS style-product-item-->
+
+  <!--CSS style-style-news.css-->
+  <link rel="stylesheet" href="assets/css/style-news.css">
+  <link rel="stylesheet" href="assets/css/style-news-media.css">
+  <!-- end CSS style-news.css-->
+
+  <!--CSS style-style-header.css-->
+  <link rel="stylesheet" href="assets/css/style-header.css">
+  <link rel="stylesheet" href="assets/css/style-header-media.css">
+  <!-- end CSS style-header.css-->
+
+  <!--CSS product-card.css-->
+  <link rel="stylesheet" href="assets/css/product-card.css">
+  <link rel="stylesheet" href="assets/css/product-card-media.css">
+  <!-- end CSS product-card.css-->
+
+  <!--CSS style-style-footer.css-->
+  <link rel="stylesheet" href="assets/css/style-footer.css">
+  <link rel="stylesheet" href="assets/css/style-footer-media.css">
+  <!-- end CSS style-footer.css-->
+
+  <!--CSS style-main-banner.css-->
+  <link rel="stylesheet" href="assets/css/style-main-banner.css">
+  <link rel="stylesheet" href="assets/css/style-main-banner-media.css">
+  <!-- end style-main-banner.css-->
+
+  <!--CSS style-advantage.css-->
+  <link rel="stylesheet" href="assets/css/style-advantage.css">
+  <link rel="stylesheet" href="assets/css/style-advantage-media.css">
+  <!-- end style-advantage.css-->
+
+
+  <!--CSS style-popular_category_block.css-->
+  <link rel="stylesheet" href="assets/css/style-popular_category_block.css">
+  <link rel="stylesheet" href="assets/css/style-popular_category_block-media.css">
+  <!-- end style-popular_category_block-->
+
+
+  <!--CSS style-product_block_recommendations.css-->
+  <link rel="stylesheet" href="assets/css/style-product_block_recommendations.css">
+  <link rel="stylesheet" href="assets/css/style-product_block_recommendations-media.css">
+  <!-- end style-product_block_recommendations-->
+
+  <!--CSS style-tabs_sale_block.css-->
+  <link rel="stylesheet" href="assets/css/style-tabs_sale_block.css">
+  <link rel="stylesheet" href="assets/css/style-tabs_sale_block-media.css">
+  <!-- end style-tabs_sale_block-->
+
+  <!--CSS style-social_block.css-->
+  <link rel="stylesheet" href="assets/css/style-social_block.css">
+  <link rel="stylesheet" href="assets/css/style-social_block-media.css">
+  <!-- end style-social_block-->
+
+  <!--CSS style-feedback_block.css-->
+  <link rel="stylesheet" href="assets/css/style-feedback_block.css">
+  <link rel="stylesheet" href="assets/css/style-feedback_block-media.css">
+  <!-- end style-feedback_block-->
+
+  <!--CSS style-about_block.css-->
+  <link rel="stylesheet" href="assets/css/style-about_block.css">
+  <link rel="stylesheet" href="assets/css/style-about_block-media.css">
+  <!-- end style-about_block-->
+
+  <!--CSS style-brand_block.css-->
+  <link rel="stylesheet" href="assets/css/style-service_block.css">
+  <link rel="stylesheet" href="assets/css/style-service_block-media.css">
+  <!-- end style-service_block-->
+
+  <!--CSS style-brand_block.css-->
+  <link rel="stylesheet" href="assets/css/style-brand_block.css">
+  <link rel="stylesheet" href="assets/css/style-brand_block-media.css">
+  <!-- end style-service_block-->
+
+  <!--CSS style-blog_block.css-->
+  <link rel="stylesheet" href="assets/css/style-blog_block.css">
+  <link rel="stylesheet" href="assets/css/style-blog_block-media.css">
+  <!-- end style-blog_block-->
+
+</head>
+
+<body>
+
+  <header class="spb-header">
+    <div class="spb-header__top">
+      <div class="spb-container spb-header__top-container">
+        <div class="spb-logo"></div>
+        <span class="spb-header__top-text">Высокие технологии на службе Отечеству</span>
+        <span class="spb-header__top-text spb-header__top-phone">+7 495 | 232-20-33</span>
+        <span class="spb-header__top-text spb-header__top-email">info@dolomant.ru</span>
+        <div class="spb-header__top-qustionButton"><span>Задать вопрос</span></div>
+        <div class="spb-header__top-loop"></div>
+      </div>
+    </div>
+    <div class="spb-header__bottom ">
+      <div class="spb-container spb-header__bottom-container">
+        <nav class="spb-header__menu">
+          <div><a>Заказные разработки</a></div>
+          <div><a>Контрактное производство</a></div>
+          <div><a>Сервис и поддержка</a></div>
+          <div><a>О компании</a></div>
+          <div><a>Карьера</a></div>
+          <div><a>Контакты</a></div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- <div class="spb-vector"></div> -->
+  <section class="spb-main-banner">
+    <div class="home-demo">
+      <div id="big-slider" class="owl-carousel owl-theme">
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="spb-small-banner">
+    <div class="spb-container spb-small-banner__container">
+      <div class="spb-small-banner__left-cart">
+
+      </div>
+      <div class="spb-small-banner__right-cart"></div>
+    </div>
+  </section>
+  <section class="spb-examples-products">
+    <div class="spb-container ">
+      <h1 class="spb-examples-products__logo">Примеры продукции</h1>
+      <div class="spb-examples-products__slider-container">
+        <div id="spb-js-little-slider" class="spb-little-slider owl-carousel owl-theme">
+          <div class="item">
+            <div class="spb-little-slider__item-image spb-little-slider__item-image--calculators"></div>
+            <span class="spb-little-slider__item-description">Спецвычеслители в формате Евромеханика 6U</span>
+          </div>
+          <div class="item">
+            <div class="spb-little-slider__item-image spb-little-slider__item-image--onboard_pc"></div>
+            <span class="spb-little-slider__item-description">Бортовые ПК</span>
+          </div>
+          <div class="item">
+            <div class="spb-little-slider__item-image spb-little-slider__item-image--panel_pc"></div>
+            <span class="spb-little-slider__item-description">Панельные ПК</span>
+          </div>
+          <div class="item">
+            <div class="spb-little-slider__item-image spb-little-slider__item-image--monoblocks"></div>
+            <span class="spb-little-slider__item-description">Моноблоки</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--JS-->
+
+  <!-- 1 - jquery JS -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+    integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <!-- end jquery JS -->
+
+  <!-- tether JS  correct work bootstrap_4 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+  <!-- end tether JS -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+    integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+  <!-- end Bootstrap JS -->
+
+  <!--  JS -->
+  <script src="assets/js/script.js"></script>
+  <!-- end  JS -->
+
+  <!-- owlcarousel JS -->
+  <script src="assets/plugin/OwlCarousel2-2.3.4/owl.carousel.js"></script>
+  <!-- end owlcarousel JS -->
+
+
+  <!--end JS-->
+
+</body>
+
+</html>

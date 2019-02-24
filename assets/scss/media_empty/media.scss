@@ -1,0 +1,27 @@
+@import "variables.scss";
+
+///////////////////////////////////
+
+// Малые девайсы («ландшафтные телефоны», >= 576px)
+@media (min-width: 576px) {  }
+
+// Средние девайсы («таблетки», >= 768px)
+@media (min-width: 768px) {
+
+  html {
+    font-size: $main_content_font_size_mobile !important;
+  }
+
+}
+
+// Большие девайсы (десктопы, >= 992px) 
+@media (min-width: 992px) {
+
+  //  html,body {
+  //   overflow-x: hidden;
+  // }
+
+}
+
+// Экстрабольшие девайсы (большие десктопы, >= 1200px)
+@media (min-width: 1200px) {  }
