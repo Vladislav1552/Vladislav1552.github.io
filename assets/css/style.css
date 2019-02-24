@@ -1249,10 +1249,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 461px;
+  height: 90%;
 }
 
 .spb-contact__item {
-  height: 118px;
+  height: 50%;
   background: white;
   width: 100%;
   display: flex;
