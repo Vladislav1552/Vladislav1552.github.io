@@ -20,7 +20,31 @@ body {
   width: 154px;
   height: 58px;
 }
-
+.button{
+font-size: 1em;
+width: 140px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+position: relative;
+}
+.button::before{
+  content: "";
+  position: absolute;
+  width: 29.2px;
+  height: 29.2px;
+  background: url(/assets/img/Subtract-orange.png);
+  left: 0;
+  top: 0;
+  }
+.button__link{
+ text-decoration: none;
+ font-size: 1em;
+ letter-spacing: 0.05em;
+ font-weight: 600;
+ color: inherit;
+}
 /* ___________ header__________________ */
 .spb-header {
   background: #FFFFFF;
@@ -30,20 +54,28 @@ body {
 .spb-header__top {
   height: 90px;
   display: flex;
+  width: 100%;
   justify-content: center;
 }
 
 .spb-header__top-container {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: white;
+  z-index: 100;
 }
+
 
 .spb-header__top-text {
   font-size: 16px;
   letter-spacing: 0.05em;
   color: #313948;
   font-weight: bold;
+}
+.spb-header__top-technology{
+
 }
 
 .spb-header__top-qustionButton {
@@ -69,6 +101,27 @@ body {
   background: #355F25;
   display: flex;
   justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.spb-header__bottom::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30vh;
+  min-height: 275px;
+  background: gainsboro;
+  top: 100%;
+  z-index: 2;
+  transition: 1s;
+  opacity: 0;
+}
+.spb-header__bottom_modal::after {
+
+
+  transition: 1s;
+  opacity: 1;
 }
 
 .spb-header__bottom-container {
@@ -85,8 +138,46 @@ body {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
+  position: relative;
 }
 
+
+.spb-header__menu_hover{
+  display: none;
+  stroke: white;
+  height: auto;
+  position: absolute;
+  top: 17px;
+  width: 100%;
+}
+.spb-header__menu-item{
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spb-header__menu .spb-header__menu-item.hover {
+  background: url(/assets/img/menu-hover.png) no-repeat;
+  background-position: center 45px;
+}
+.spb-header__menu_lvl-2{
+  position: absolute;
+  bottom: -80px;
+  z-index: 25;
+  top: 71px;
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  min-height: 250px;
+}
+.spb-header__top-phone-menu{
+  width: 50px;
+  height: 50px;
+  background: url(/assets/img/menu-phone.png) no-repeat;
+  background-size: cover;
+  display: none;
+}
 /* vector */
 .spb-vector {
   position: absolute;
@@ -127,7 +218,8 @@ body {
 /* main -banner */
 .spb-main-banner {
   width: 100%;
-  height: 60vh;
+  height: 60%;
+  min-height: 556px;
   background: linear-gradient(111.34deg, #355F25 8.94%, rgba(53, 95, 37, 0) 44.06%);
 }
 .spb-main-banner .item::before{
@@ -159,8 +251,8 @@ body {
   background: white !important;
   border-radius: 50%;
   position: relative;
-
 }
+
 .spb-main-banner .owl-next span::after{
   content: "";
   position: absolute;
@@ -191,6 +283,25 @@ body {
 .spb-main-banner .owl-next:active{
   border: none !important;
 }
+.spb-main-banner .owl-dots{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  bottom: 5%;
+}
+.spb-main-banner .owl-dot span{
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  
+}
+.spb-main-banner .owl-dot.active span{
+  background: #FF7130;
+}
+.spb-main-banner .owl-dots .owl-dot{
+  background: none;
+}
 #big-slider::after{
   content: "";
   position: absolute;
@@ -214,6 +325,40 @@ body {
   background-size: cover;
   opacity: 0.9;
   position: relative;
+}
+.spb-main-banner__1st_slide .spb-small-banner__cart-container{
+  display: flex;
+  flex-direction: column;
+  height: 43%;
+  justify-content: space-between;
+  /* padding: 7%; */
+  padding: 0;
+  width: 660px;
+  color: white;
+  position: absolute;
+  top: 26%;
+  left: 15%;
+}
+.spb-main-banner__1st_slide .spb-header__top-qustionButton{
+  display: flex !important;
+}
+.spb-main-banner__1st_slide  .spb-small-banner__button{
+  width: 207px;
+  height: 65px;
+}
+.spb-main-banner__1st_slide .spb-small-banner__text{
+  line-height: 28px;
+  font-size: 16px;
+  
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.spb-main-banner__1st_slide .spb-small-banner__logo{
+  line-height: 48px;
+  font-size: 36px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 2%;
 }
 .spb-main-banner__2st_slide{
   background: url(/assets/img/career.png) no-repeat;
@@ -249,20 +394,52 @@ body {
 .spb-small-banner__container {
   display: flex;
 }
+.spb-small-banner__container-text{
+  font-size: 1em;
+}
 
 .spb-small-banner__left-cart, .spb-small-banner__right-cart {
   width: 100%;
   height: 425px;
 }
+.spb-small-banner__left-cart:hover, .spb-small-banner__right-cart:hover {
+  background: url(/assets/img/industry-implementations.png);
+}
+.spb-small-banner__left-cart:hover {
+  color: white;
+}
+.spb-small-banner__left-cart:hover .spb-small-banner__left-button::before {
+  background: url(/assets/img/Subtract-white.png);
+}
 
 .spb-small-banner__left-cart {
+  color: #212121;
   background: url(/assets/img/spb-small-banner__left-cart.png);
 }
-
-.spb-small-banner__right-cart {
-  background: url(Grid_18_5760x3240.png), linear-gradient(0deg, rgba(51, 66, 73, 0.85), rgba(51, 66, 73, 0.85)), url(i22.jpg);
-  background-blend-mode: screen, normal, normal;
+.spb-small-banner__right-button::before{
+  background: url(/assets/img/Subtract-white.png);
 }
+.spb-small-banner__right-cart {
+  color: white;
+  background: url(/assets/img/заказные-разработки.png);
+}
+.spb-small-banner__cart-container{
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  justify-content: space-between;
+  padding: 7%;
+}
+.spb-small-banner__logo{
+  line-height: 46px;
+  font-size: 2.3em;
+  margin-bottom: 3%;
+}
+.spb-small-banner__text{
+  line-height: 28px;
+  font-size: 1em;
+}
+
 
 /* examples-products */
 .spb-examples-products {
@@ -412,6 +589,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  overflow: hidden;
 
 }
 .spb-history__container{
@@ -445,6 +623,7 @@ body {
   align-items: center;
   width: 100%;
   height: 410px;
+  overflow: hidden;
 }
 .spb-history__item{
   height: 100%;
@@ -514,7 +693,7 @@ body {
   justify-content: center;
   align-items: center;
   line-height: 29px;
-  font-size: 28px;
+  font-size: 1.8em;
   text-align: center;
   color: #D16A16;
 
@@ -558,7 +737,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 493px;
+  width: 430px;
   height: 375px;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -623,7 +802,7 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  color: #FFFFFF;
+  color: gainsboro;
   height: 70%;
 
 }
@@ -631,17 +810,20 @@ body {
   width: 180px;
   height: 125px;
   background:url(/assets/img/career__icon.png) no-repeat;
+  background-size: contain;
 }
 .spb-career__logo{
   line-height: 65px;
   font-size: 2.5em;
   text-align: center;
+  font-weight: 600;
+  color: white;
 }
 .spb-career__text{
   line-height: 28px;
   font-size: 1em;
   text-align: center;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   width: 40%;
 }
 .spb-career__button{
@@ -968,14 +1150,37 @@ $font: "Arial";
 /* spb-contact */
 .spb-contact{
   width: 100%;
-  height:60vh;
+  height: 60vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.spb-contact__map{
+  width: 100%;
+  height: 100%;
   background: url(/assets/img/contact.png) no-repeat;
+  position: absolute;
+  background-size: cover;
 }
 .spb-contact__form{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 461px;
+  height: auto;
+  margin-left: 5%;
+  background: white;
+  padding: 2%;
+  z-index: 2;
+}
+.spb-contact__logo{
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 3%;
+
 }
 .spb-contact__item{
   height: 118px;
@@ -1002,3 +1207,238 @@ $font: "Arial";
   color: rgba(49, 57, 72, 0.7);
   font-weight: 300;
 }
+.spb-footer{
+  width: 100%;
+  height: 15%;
+  background: url(/assets/img/razrab.png) #355F25 no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@media (max-width:1350px) {
+  .spb-container {
+    width: 95%;
+  }
+  .spb-header__menu{
+    width: 100%;
+  }
+  .spb-industry-implementations__item-container{
+    justify-content: space-around;
+  }
+  .spb-industry-implementations__item{
+    width: 385px;
+  }
+}
+
+
+@media (max-width:1200px) {
+  .spb-main-banner__1st_slide .spb-small-banner__logo{
+    line-height: 41px;
+    font-size: 32px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 2%;
+  }
+  .spb-main-banner__1st_slide .spb-small-banner__cart-container{
+    width: 552px;
+  }
+  .spb-industry-implementations__item{
+    width: 385px;
+  }
+  .spb-career__text{
+    width: 60%;
+    font-size: 0.9em;
+  }
+  .spb-header__top-phone, .spb-header__top-email, .spb-header__top-qustionButton ,.spb-header__top-loop{
+    display: none;
+  }
+  .spb-header__top-phone-menu{
+    display: block;
+  }
+  
+  .spb-header__top-text {
+    margin-left: -35%;
+  }
+  .spb-header__menu{
+    font-size: 13px;
+  }
+  .spb-history__item-text{
+    font-size: 1.5em;
+  }
+}
+@media (max-width:992px) {
+  .spb-header__top-text {
+    margin-left: -20%;
+    width: 40%;
+}
+
+}
+@media (max-width:768px) {
+  .spb-main-banner__1st_slide .spb-small-banner__logo{
+    line-height: 34px;
+    font-size: 23px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 2%;
+  }
+  .spb-main-banner__1st_slide .spb-small-banner__cart-container{
+    width: 430px;
+  }
+  .spb-logo{
+    width: 190px;
+  }
+  .spb-header__top-text{
+    width: auto;
+    margin: 0;
+  }
+  .spb-header__bottom {
+    display: none;
+  }
+  .spb-small-banner{
+    height: auto;
+  }
+  .spb-small-banner__container{
+    flex-direction: column;
+  }
+  .spb-history {
+    height: 145%;
+  }
+  .spb-history__logo ,.spb-examples-products__logo { 
+    width: 85%;
+    line-height: 33px;
+    font-size: 25px;
+  }
+  .spb-industry-implementations__logo {
+    font-size: 25px;
+  }
+  .spb-history__item-container{
+    flex-direction: column;
+  }
+  .spb-history__item-container{
+    height: 100%;
+    justify-content: space-around;
+  }
+  .spb-history__container{
+    height: 100%;
+  }
+  .spb-history__item{
+    height: 45%;
+    width: 355px;
+
+  }
+  .spb-industry-implementations .spb-container{
+    width: 100%;
+  }
+  .spb-industry-implementations__item {
+    width: 100%;
+  }
+  .spb-career__logo{
+  font-size: 1.8em;
+  }
+.spb-career__text{
+  width: 100%;
+  font-size: 0.9em;
+}
+.spb-contact__map{
+  position: relative;
+}
+.spb-contact{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+}
+.spb-contact__item{
+  height: 175px;
+  padding-left: 5%;
+  width: 100%;
+}
+.spb-contact__logo{
+  padding-left: 5%;
+}
+.spb-contact__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  background: white;
+  padding: 8%;
+  z-index: 1;
+  margin-left: 0;
+  padding: 5% 0 5% 0;
+}
+.spb-small-banner__left-cart, .spb-small-banner__right-cart{
+  margin: 10% 0 0% 0;
+}
+}
+@media (max-width:500px) {
+  .spb-main-banner__1st_slide .spb-small-banner__cart-container {
+    width: 350px;
+  }
+  .spb-main-banner__1st_slide .spb-small-banner__cart-container {
+    display: flex;
+    flex-direction: column;
+    height: 43%;
+    justify-content: space-between;
+    /* padding: 7%; */
+    padding: 0;
+
+    color: white;
+    position: absolute;
+    top: 26%;
+    left: 2%;
+  }
+  .spb-header__top-phone-menu{
+    width: 40px;
+    height: 40px;
+  }
+  .spb-main-banner .owl-next{
+    top: 55%;
+  }
+  .spb-header__top-text{
+    display: none;
+  }
+  .spb-container{
+    width: 88%; 
+  }
+  .spb-history__item{
+    height: 27%;
+    width: 100%;
+  }
+  .spb-history__logo, .spb-examples-products__logo {
+    width: 100%;
+    line-height: 33px;
+    font-size:  calc(24px - 5px);
+}
+.spb-history__logo::before{
+  bottom: -15%;
+}
+.spb-career__logo{
+  font-size: 1.5em;
+}
+.spb-career__container{
+  height: 80%;
+
+}
+.spb-small-banner__container-text{
+  font-size: 0.8em;
+}
+.spb-small-banner__logo{
+  line-height: 37px;
+  font-size: 2.1em;
+  margin-bottom: 3%;
+}
+.spb-small-banner__left-cart, .spb-small-banner__right-cart{
+  height: 330px;
+}
+}
+
+
+
+
+
