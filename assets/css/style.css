@@ -1,5 +1,7 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
-ul, ol, dl, li, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, input {
+ul, ol, dl, li, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, body, html, p,
+blockquote, input {
   margin: 0;
   padding: 0;
   font-family: Arial;
@@ -16,22 +18,49 @@ body {
 }
 
 .spb-logo {
-  background: url(../img/logo.png) no-repeat;
+  background: url(/assets/img/logo.png) no-repeat;
   width: 154px;
   height: 58px;
 }
 
-/* ___________ header__________________ */
+.button {
+  font-size: 1em;
+  width: 140px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
 
+.button::before {
+  content: "";
+  position: absolute;
+  width: 29.2px;
+  height: 29.2px;
+  background: url(/assets/img/Subtract-orange.png);
+  left: 0;
+  top: 0;
+}
+
+.button__link {
+  text-decoration: none;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: inherit;
+}
+
+/* ___________ header__________________ */
 .spb-header {
   background: #FFFFFF;
 }
 
 /* top */
-
 .spb-header__top {
   height: 90px;
   display: flex;
+  width: 100%;
   justify-content: center;
 }
 
@@ -39,6 +68,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: white;
+  z-index: 100;
 }
 
 .spb-header__top-text {
@@ -61,17 +92,37 @@ body {
 }
 
 .spb-header__top-loop {
-  background: url(../img/search.svg) no-repeat;
+  background: url(/assets/img/search.svg) no-repeat;
   width: 32px;
   height: 27px;
 }
 
 /* bot */
-
 .spb-header__bottom {
   background: #355F25;
   display: flex;
   justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.spb-header__bottom::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30vh;
+  min-height: 275px;
+  background: gainsboro;
+  top: 100%;
+  z-index: 2;
+  transition: 1s;
+  opacity: 0;
+}
+
+.spb-header__bottom_modal::after {
+  transition: 1s;
+  opacity: 1;
 }
 
 .spb-header__bottom-container {
@@ -88,14 +139,55 @@ body {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
+  position: relative;
+}
+
+.spb-header__menu_hover {
+  display: none;
+  stroke: white;
+  height: auto;
+  position: absolute;
+  top: 17px;
+  width: 100%;
+}
+
+.spb-header__menu-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spb-header__menu .spb-header__menu-item.hover {
+  background: url(/assets/img/menu-hover.png) no-repeat;
+  background-position: center 45px;
+}
+
+.spb-header__menu_lvl-2 {
+  position: absolute;
+  bottom: -80px;
+  z-index: 25;
+  top: 71px;
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  min-height: 250px;
+}
+
+.spb-header__top-phone-menu {
+  width: 50px;
+  height: 50px;
+  background: url(/assets/img/menu-phone.png) no-repeat;
+  background-size: cover;
+  display: none;
 }
 
 /* vector */
-
 .spb-vector {
   position: absolute;
   height: 863px;
-  background: url(../img/main-vector.svg) rgba(255, 255, 255, 0.2);
+  background: url(/assets/img/main-vector.svg) rgba(255, 255, 255, 0.2);
   -webkit-filter: blur(15px);
   filter: blur(15px);
   -webkit-transform: rotate(4.9deg);
@@ -129,10 +221,10 @@ body {
 }
 
 /* main -banner */
-
 .spb-main-banner {
   width: 100%;
-  height: 60vh;
+  height: 60%;
+  min-height: 556px;
   background: linear-gradient(111.34deg, #355F25 8.94%, rgba(53, 95, 37, 0) 44.06%);
 }
 
@@ -171,7 +263,7 @@ body {
 .spb-main-banner .owl-next span::after {
   content: "";
   position: absolute;
-  background: url(../img/arrow-slider.png) no-repeat;
+  background: url(/assets/img/arrow-slider.png) no-repeat;
   width: 12px;
   height: 12px;
   top: 8px;
@@ -194,11 +286,33 @@ body {
 
 .spb-main-banner .owl-next span:hover:before {
   -webkit-animation: item-vector1 5s running linear infinite;
-  animation: item-vector1 5s running linear infinite;
+          animation: item-vector1 5s running linear infinite;
 }
 
 .spb-main-banner .owl-next:active {
   border: none !important;
+}
+
+.spb-main-banner .owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  bottom: 5%;
+}
+
+.spb-main-banner .owl-dot span {
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
+
+.spb-main-banner .owl-dot.active span {
+  background: #FF7130;
+}
+
+.spb-main-banner .owl-dots .owl-dot {
+  background: none;
 }
 
 #big-slider::after {
@@ -216,7 +330,7 @@ body {
 }
 
 .spb-main-banner__1st_slide {
-  background: url(../img/slide_1.jpg) no-repeat;
+  background: url(/assets/img/slide_1.jpg) no-repeat;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -225,8 +339,45 @@ body {
   position: relative;
 }
 
+.spb-main-banner__1st_slide .spb-small-banner__cart-container {
+  display: flex;
+  flex-direction: column;
+  height: 43%;
+  justify-content: space-between;
+  /* padding: 7%; */
+  padding: 0;
+  width: 660px;
+  color: white;
+  position: absolute;
+  top: 26%;
+  left: 15%;
+}
+
+.spb-main-banner__1st_slide .spb-header__top-qustionButton {
+  display: flex !important;
+}
+
+.spb-main-banner__1st_slide .spb-small-banner__button {
+  width: 207px;
+  height: 65px;
+}
+
+.spb-main-banner__1st_slide .spb-small-banner__text {
+  line-height: 28px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.spb-main-banner__1st_slide .spb-small-banner__logo {
+  line-height: 48px;
+  font-size: 36px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 2%;
+}
+
 .spb-main-banner__2st_slide {
-  background: url(../img/career.png) no-repeat;
+  background: url(/assets/img/career.png) no-repeat;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -236,7 +387,7 @@ body {
 }
 
 .spb-main-banner__3st_slide {
-  background: url(../img/contact.png) no-repeat;
+  background: url(/assets/img/contact.png) no-repeat;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -250,7 +401,6 @@ body {
 }
 
 /* small-banner */
-
 .spb-small-banner {
   width: 100%;
   height: 650px;
@@ -263,22 +413,61 @@ body {
   display: flex;
 }
 
+.spb-small-banner__container-text {
+  font-size: 1em;
+}
+
 .spb-small-banner__left-cart, .spb-small-banner__right-cart {
   width: 100%;
   height: 425px;
 }
 
+.spb-small-banner__left-cart:hover, .spb-small-banner__right-cart:hover {
+  background: url(/assets/img/industry-implementations.png);
+}
+
+.spb-small-banner__left-cart:hover {
+  color: white;
+}
+
+.spb-small-banner__left-cart:hover .spb-small-banner__left-button::before {
+  background: url(/assets/img/Subtract-white.png);
+}
+
 .spb-small-banner__left-cart {
-  background: url(../img/spb-small-banner__left-cart.png);
+  color: #212121;
+  background: url(/assets/img/spb-small-banner__left-cart.png);
+}
+
+.spb-small-banner__right-button::before {
+  background: url(/assets/img/Subtract-white.png);
 }
 
 .spb-small-banner__right-cart {
-  background: url(../img/заказные-разработки.png) no-repeat;
-  background-size: cover;
+  color: white;
+  background: url(/assets/img/заказные-разработки.png);
+}
+
+.spb-small-banner__cart-container {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  justify-content: space-between;
+  padding: 7%;
+}
+
+.spb-small-banner__logo {
+  line-height: 46px;
+  font-size: 2.3em;
+  margin-bottom: 3%;
+}
+
+.spb-small-banner__text {
+  line-height: 28px;
+  font-size: 1em;
 }
 
 /* examples-products */
-
 .spb-examples-products {
   width: 100%;
   height: 516px;
@@ -311,7 +500,6 @@ body {
 }
 
 /* little-slider */
-
 .spb-little-slider.owl-carousel {
   height: 100%;
   display: flex;
@@ -329,12 +517,11 @@ body {
 }
 
 .spb-little-slider.owl-carousel .owl-item:hover {
-  background: url(../img/little-slider__item-image-hover.png);
+  background: url(/assets/img/little-slider__item-image-hover.png);
   color: white !important;
 }
 
 /* little-slider-navigation */
-
 .spb-little-slider .owl-nav {
   position: absolute;
   top: -10px;
@@ -348,7 +535,7 @@ body {
   width: 38.02px;
   height: 38.02px;
   margin: 0;
-  background: url(../img/spb-little-slider-prev.png) no-repeat;
+  background: url(/assets/img/spb-little-slider-prev.png) no-repeat;
   background-size: cover;
   background-size: 80%;
   background-position: 0;
@@ -358,7 +545,7 @@ body {
   width: 38.02px;
   height: 38.02px;
   margin: 0;
-  background: url(../img/spb-little-slider-next.png) no-repeat;
+  background: url(/assets/img/spb-little-slider-next.png) no-repeat;
   background-size: cover;
   background-size: 80%;
   background-position: 0;
@@ -369,17 +556,16 @@ body {
 }
 
 .spb-little-slider .owl-nav .owl-prev:hover, .spb-little-slider .owl-nav .owl-prev:focus {
-  background: url(../img/owl-prevfocus-hover.png) no-repeat;
+  background: url(/assets/img/owl-prevfocus-hover.png) no-repeat;
   background-size: cover;
 }
 
 .spb-little-slider .owl-nav .owl-next:hover, .spb-little-slider .owl-nav .owl-next:focus {
-  background: url(../img/owl-nextfocus-hover.png) no-repeat;
+  background: url(/assets/img/owl-nextfocus-hover.png) no-repeat;
   background-size: cover;
 }
 
 /* end little-slider-navigation */
-
 .spb-little-slider .item {
   display: flex;
   justify-content: space-around;
@@ -400,35 +586,35 @@ body {
 .spb-little-slider__item-image--calculators {
   width: 208px;
   height: 128px;
-  background: url(../img/calculators.png) no-repeat;
+  background: url(/assets/img/calculators.png) no-repeat;
 }
 
 .spb-little-slider__item-image--onboard_pc {
   width: 175px;
   height: 132px;
-  background: url(../img/onboard_pc.png) no-repeat;
+  background: url(/assets/img/onboard_pc.png) no-repeat;
 }
 
 .spb-little-slider__item-image--panel_pc {
   width: 169px;
   height: 128px;
-  background: url(../img/panel_pc.png) no-repeat;
+  background: url(/assets/img/panel_pc.png) no-repeat;
 }
 
 .spb-little-slider__item-image--monoblocks {
   width: 151px;
   height: 119px;
-  background: url(../img/monoblocks.png) no-repeat;
+  background: url(/assets/img/monoblocks.png) no-repeat;
 }
 
 /* spb-history */
-
 .spb-history {
   width: 100%;
   height: 800px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  overflow: hidden;
 }
 
 .spb-history__container {
@@ -464,6 +650,7 @@ body {
   align-items: center;
   width: 100%;
   height: 410px;
+  overflow: hidden;
 }
 
 .spb-history__item {
@@ -483,107 +670,107 @@ body {
 }
 
 .spb-history__item-vector--object1 {
-  background: url(../img/item-vector-object1.svg) no-repeat;
+  background: url(/assets/img/item-vector-object1.svg) no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-animation: item-vector1 25s paused linear infinite;
-  animation: item-vector1 25s paused linear infinite;
+          animation: item-vector1 25s paused linear infinite;
 }
 
 .spb-history__item-vector--object2 {
-  background: url(../img/item-vector-object1.svg) no-repeat;
+  background: url(/assets/img/item-vector-object1.svg) no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-animation: item-vector2 25s paused linear infinite;
-  animation: item-vector2 25s paused linear infinite;
+          animation: item-vector2 25s paused linear infinite;
 }
 
 .spb-history__item-vector--object3 {
-  background: url(../img/item-vector-object1.svg) no-repeat;
+  background: url(/assets/img/item-vector-object1.svg) no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-animation: item-vector3 25s paused linear infinite;
-  animation: item-vector3 25s paused linear infinite;
+          animation: item-vector3 25s paused linear infinite;
 }
 
 .spb-history__item-vector--object1:hover {
   -webkit-animation: item-vector1 25s running linear infinite;
-  animation: item-vector1 25s running linear infinite;
+          animation: item-vector1 25s running linear infinite;
 }
 
 .spb-history__item-vector--object2:hover {
   -webkit-animation: item-vector2 25s running linear infinite;
-  animation: item-vector2 25s running linear infinite;
+          animation: item-vector2 25s running linear infinite;
 }
 
 .spb-history__item-vector--object3:hover {
   -webkit-animation: item-vector3 25s running linear infinite;
-  animation: item-vector3 25s running linear infinite;
+          animation: item-vector3 25s running linear infinite;
 }
 
 @-webkit-keyframes item-vector1 {
   from {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes item-vector1 {
   from {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @-webkit-keyframes item-vector2 {
   from {
     -webkit-transform: rotate(60deg);
-    transform: rotate(60deg);
+            transform: rotate(60deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes item-vector2 {
   from {
     -webkit-transform: rotate(60deg);
-    transform: rotate(60deg);
+            transform: rotate(60deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @-webkit-keyframes item-vector3 {
   from {
     -webkit-transform: rotate(120deg);
-    transform: rotate(120deg);
+            transform: rotate(120deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes item-vector3 {
   from {
     -webkit-transform: rotate(120deg);
-    transform: rotate(120deg);
+            transform: rotate(120deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -595,7 +782,7 @@ body {
   justify-content: center;
   align-items: center;
   line-height: 29px;
-  font-size: 28px;
+  font-size: 1.8em;
   text-align: center;
   color: #D16A16;
 }
@@ -605,13 +792,12 @@ body {
 }
 
 /* spb-implementations */
-
 .spb-industry-implementations {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(../img/industry-implementations.png);
+  background: url(/assets/img/industry-implementations.png);
 }
 
 .spb-industry-implementations__container {
@@ -642,7 +828,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 493px;
+  width: 430px;
   height: 375px;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -653,39 +839,38 @@ body {
   align-items: center;
   flex-direction: column;
 } */
-
 .spb-industry-implementations__icon_locomotive {
-  background: url(../img/locomotive.png) no-repeat;
+  background: url(/assets/img/locomotive.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_atom {
-  background: url(../img/atom.png) no-repeat;
+  background: url(/assets/img/atom.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_oil {
-  background: url(../img/oil.png) no-repeat;
+  background: url(/assets/img/oil.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_locomotive {
-  background: url(../img/locomotive.png) no-repeat;
+  background: url(/assets/img/locomotive.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_medick {
-  background: url(../img/medick.png) no-repeat;
+  background: url(/assets/img/medick.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_spec {
-  background: url(../img/spec.png) no-repeat;
+  background: url(/assets/img/spec.png) no-repeat;
   width: 92px;
   height: 90px;
 }
@@ -702,13 +887,12 @@ body {
 }
 
 /* spb-career */
-
 .spb-career {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  background: url(../img/career.png) no-repeat;
+  background: url(/assets/img/career.png) no-repeat;
 }
 
 .spb-career__container {
@@ -716,27 +900,30 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  color: #FFFFFF;
+  color: gainsboro;
   height: 70%;
 }
 
 .spb-career__icon {
   width: 180px;
   height: 125px;
-  background: url(../img/career__icon.png) no-repeat;
+  background: url(/assets/img/career__icon.png) no-repeat;
+  background-size: contain;
 }
 
 .spb-career__logo {
   line-height: 65px;
   font-size: 2.5em;
   text-align: center;
+  font-weight: 600;
+  color: white;
 }
 
 .spb-career__text {
   line-height: 28px;
   font-size: 1em;
   text-align: center;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   width: 40%;
 }
 
@@ -757,7 +944,7 @@ body {
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   color: #fff;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .glitch-btn .mask {
@@ -783,7 +970,7 @@ body {
 .glitch-btn:hover:before {
   background: #D16A16;
   -webkit-transform: translateX(155%) scaleX(3.5) scaleY(0.8);
-  transform: translateX(155%) scaleX(3.5) scaleY(0.8);
+          transform: translateX(155%) scaleX(3.5) scaleY(0.8);
 }
 
 .glitch-btn:before {
@@ -815,7 +1002,7 @@ body {
 .glitch-btn:hover:after {
   background: #D16A16;
   -webkit-transform: translateX(-60%) translateY(-590%) rotate(90deg) scaleX(0.6);
-  transform: translateX(-60%) translateY(-590%) rotate(90deg) scaleX(0.6);
+          transform: translateX(-60%) translateY(-590%) rotate(90deg) scaleX(0.6);
 }
 
 .glitch-btn .mask1 {
@@ -839,27 +1026,27 @@ body {
 
 .glitch-btn:hover .mask1 {
   -webkit-animation: glitchin1 0.2s 0.3s both;
-  animation: glitchin1 0.2s 0.3s both;
+          animation: glitchin1 0.2s 0.3s both;
 }
 
 .glitch-btn:hover .mask2 {
   -webkit-animation: glitchin2 0.2s 0.2s both;
-  animation: glitchin2 0.2s 0.2s both;
+          animation: glitchin2 0.2s 0.2s both;
 }
 
 .glitch-btn:hover .mask3 {
   -webkit-animation: glitchin1 0.2s 0.2s both;
-  animation: glitchin1 0.2s 0.2s both;
+          animation: glitchin1 0.2s 0.2s both;
 }
 
 .glitch-btn:hover .hidden {
   -webkit-animation: fade-in 0.1s 0.2s forwards;
-  animation: fade-in 0.1s 0.2s forwards;
+          animation: fade-in 0.1s 0.2s forwards;
 }
 
 .glitch-btn:hover .text {
   -webkit-animation: fade-in 0.1s 0.2s forwards;
-  animation: fade-in 0.1s 0.2s forwards;
+          animation: fade-in 0.1s 0.2s forwards;
 }
 
 .glitch-btn:hover .mask {
@@ -888,7 +1075,7 @@ body {
   100% {
     opacity: 0;
     -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   95% {
     opacity: 1;
@@ -976,7 +1163,7 @@ body {
   100% {
     opacity: 0;
     -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   95% {
     opacity: 1;
@@ -1064,7 +1251,7 @@ body {
   100% {
     opacity: 0;
     -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   95% {
     opacity: 1;
@@ -1152,7 +1339,7 @@ body {
   100% {
     opacity: 0;
     -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   95% {
     opacity: 1;
@@ -1237,11 +1424,21 @@ body {
 }
 
 /* spb-contact */
-
 .spb-contact {
   width: 100%;
   height: 60vh;
-  background: url(../img/contact.png) no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.spb-contact__map {
+  width: 100%;
+  height: 100%;
+  background: url(/assets/img/contact.png) no-repeat;
+  position: absolute;
+  background-size: cover;
 }
 
 .spb-contact__form {
@@ -1249,11 +1446,23 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 461px;
-  height: 90%;
+  height: auto;
+  margin-left: 5%;
+  background: white;
+  padding: 2%;
+  z-index: 2;
+}
+
+.spb-contact__logo {
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 3%;
 }
 
 .spb-contact__item {
-  height: 50%;
+  height: 118px;
   background: white;
   width: 100%;
   display: flex;
@@ -1267,7 +1476,7 @@ body {
   font-size: 16px;
   letter-spacing: 0.05em;
   -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
+          text-decoration-line: underline;
   color: #D16A16;
 }
 
@@ -1280,4 +1489,232 @@ body {
 .spb-contact__about b {
   color: rgba(49, 57, 72, 0.7);
   font-weight: 300;
+}
+
+.spb-footer {
+  width: 100%;
+  height: 15%;
+  background: url(/assets/img/razrab.png) #355F25 no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@media (max-width: 1350px) {
+  .spb-container {
+    width: 95%;
+  }
+  .spb-header__menu {
+    width: 100%;
+  }
+  .spb-industry-implementations__item-container {
+    justify-content: space-around;
+  }
+  .spb-industry-implementations__item {
+    width: 385px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .spb-main-banner__1st_slide .spb-small-banner__logo {
+    line-height: 41px;
+    font-size: 32px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 2%;
+  }
+  .spb-main-banner__1st_slide .spb-small-banner__cart-container {
+    width: 552px;
+  }
+  .spb-industry-implementations__item {
+    width: 385px;
+  }
+  .spb-career__text {
+    width: 60%;
+    font-size: 0.9em;
+  }
+  .spb-header__top-phone, .spb-header__top-email, .spb-header__top-qustionButton, .spb-header__top-loop {
+    display: none;
+  }
+  .spb-header__top-phone-menu {
+    display: block;
+  }
+  .spb-header__top-text {
+    margin-left: -35%;
+  }
+  .spb-header__menu {
+    font-size: 13px;
+  }
+  .spb-history__item-text {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 992px) {
+  .spb-header__top-text {
+    margin-left: -20%;
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .spb-main-banner__1st_slide .spb-small-banner__logo {
+    line-height: 34px;
+    font-size: 23px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 2%;
+  }
+  .spb-main-banner__1st_slide .spb-small-banner__cart-container {
+    width: 430px;
+  }
+  .spb-logo {
+    width: 190px;
+  }
+  .spb-header__top-text {
+    width: auto;
+    margin: 0;
+  }
+  .spb-header__bottom {
+    display: none;
+  }
+  .spb-small-banner {
+    height: auto;
+  }
+  .spb-small-banner__container {
+    flex-direction: column;
+  }
+  .spb-history {
+    height: 145%;
+  }
+  .spb-history__logo, .spb-examples-products__logo {
+    width: 85%;
+    line-height: 33px;
+    font-size: 25px;
+  }
+  .spb-industry-implementations__logo {
+    font-size: 25px;
+  }
+  .spb-history__item-container {
+    flex-direction: column;
+  }
+  .spb-history__item-container {
+    height: 100%;
+    justify-content: space-around;
+  }
+  .spb-history__container {
+    height: 100%;
+  }
+  .spb-history__item {
+    height: 45%;
+    width: 355px;
+  }
+  .spb-industry-implementations .spb-container {
+    width: 100%;
+  }
+  .spb-industry-implementations__item {
+    width: 100%;
+  }
+  .spb-career__logo {
+    font-size: 1.8em;
+  }
+  .spb-career__text {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  .spb-contact__map {
+    position: relative;
+  }
+  .spb-contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .spb-contact__item {
+    height: 175px;
+    padding-left: 5%;
+    width: 100%;
+  }
+  .spb-contact__logo {
+    padding-left: 5%;
+  }
+  .spb-contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: 8%;
+    z-index: 1;
+    margin-left: 0;
+    padding: 5% 0 5% 0;
+  }
+  .spb-small-banner__left-cart, .spb-small-banner__right-cart {
+    margin: 10% 0 0% 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .spb-main-banner__1st_slide .spb-small-banner__cart-container {
+    width: 350px;
+  }
+  .spb-main-banner__1st_slide .spb-small-banner__cart-container {
+    display: flex;
+    flex-direction: column;
+    height: 43%;
+    justify-content: space-between;
+    /* padding: 7%; */
+    padding: 0;
+    color: white;
+    position: absolute;
+    top: 26%;
+    left: 2%;
+  }
+  .spb-header__top-phone-menu {
+    width: 40px;
+    height: 40px;
+  }
+  .spb-main-banner .owl-next {
+    top: 55%;
+  }
+  .spb-header__top-text {
+    display: none;
+  }
+  .spb-container {
+    width: 88%;
+  }
+  .spb-history__item {
+    height: 27%;
+    width: 100%;
+  }
+  .spb-history__logo, .spb-examples-products__logo {
+    width: 100%;
+    line-height: 33px;
+    font-size: calc(24px - 5px);
+  }
+  .spb-history__logo::before {
+    bottom: -15%;
+  }
+  .spb-career__logo {
+    font-size: 1.5em;
+  }
+  .spb-career__container {
+    height: 80%;
+  }
+  .spb-small-banner__container-text {
+    font-size: 0.8em;
+  }
+  .spb-small-banner__logo {
+    line-height: 37px;
+    font-size: 2.1em;
+    margin-bottom: 3%;
+  }
+  .spb-small-banner__left-cart, .spb-small-banner__right-cart {
+    height: 330px;
+  }
 }
