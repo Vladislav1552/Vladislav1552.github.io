@@ -111,7 +111,7 @@ position: relative;
   width: 100%;
   height: 30vh;
   min-height: 275px;
-  background: gainsboro;
+  background: white;
   top: 100%;
   z-index: 2;
   transition: 1s;
@@ -156,10 +156,11 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .spb-header__menu .spb-header__menu-item.hover {
   background: url(/assets/img/menu-hover.png) no-repeat;
-  background-position: center 45px;
+  background-position: center 55px;
 }
 .spb-header__menu_lvl-2{
   position: absolute;
@@ -326,7 +327,8 @@ position: relative;
   opacity: 0.9;
   position: relative;
 }
-.spb-main-banner__1st_slide .spb-small-banner__cart-container{
+
+.spb-main-banner__1st_slide .spb-main-banner__cart-container{
   display: flex;
   flex-direction: column;
   height: 43%;
@@ -337,7 +339,7 @@ position: relative;
   color: white;
   position: absolute;
   top: 26%;
-  left: 15%;
+  left: 10%;
 }
 .spb-main-banner__1st_slide .spb-header__top-qustionButton{
   display: flex !important;
@@ -385,10 +387,11 @@ position: relative;
 /* small-banner */
 .spb-small-banner {
   width: 100%;
-  height: 650px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5%;
 }
 
 .spb-small-banner__container {
@@ -401,6 +404,9 @@ position: relative;
 .spb-small-banner__left-cart, .spb-small-banner__right-cart {
   width: 100%;
   height: 425px;
+  cursor: pointer;
+  transition-duration: 0.5s; 
+  transition-timing-function: ease-in-out;
 }
 .spb-small-banner__left-cart:hover, .spb-small-banner__right-cart:hover {
   background: url(/assets/img/industry-implementations.png);
@@ -448,7 +454,7 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  margin-top: 2.5%;
 }
 
 .spb-examples-products__logo {
@@ -490,11 +496,13 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .spb-little-slider.owl-carousel .owl-item:hover {
   background: url(/assets/img/little-slider__item-image-hover.png);
   color: white !important;
+  
 }
 
 /* little-slider-navigation */
@@ -585,18 +593,18 @@ position: relative;
 /* spb-history */
 .spb-history{
   width: 100%;
-  height: 800px;
+  height: 705px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   overflow: hidden;
-
+  margin-top:2.5%;
 }
 .spb-history__container{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 75%;
+  height: 85%;
 
 }
 .spb-history__logo{
@@ -708,6 +716,7 @@ position: relative;
   flex-direction: column;
   align-items: center;
   background: url(/assets/img/industry-implementations.png);
+  overflow: hidden;
 }
 
 .spb-industry-implementations__container{
@@ -723,24 +732,88 @@ position: relative;
   flex-flow: row wrap;
   width: 100%;
   justify-content: center;
-
+  position: relative;
 }
 
+.spb-industry-implementations__item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 385px;
+  height: 375px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: none;
+  position: relative;
+  border-top: none;
+}
+.spb-industry-implementations__item::before{
+  content: "";
+  position: absolute;
+  width: 500%;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.spb-industry-implementations__item::after{
+  content: "";
+  position: absolute;
+  width: 500%;
+  bottom: 0;
+  height: 1px;
+  top: 0;
+  background: rgba(255, 255, 255, 0.15);
+}
+// .spb-industry-implementations__line--bot::after{
+//   bottom: 0
+// }
+.spb-industry-implementations__line{
+  position: absolute;
+  width: 150%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+.spb-industry-implementations__line--top{
+  top: 0;
+}
+
+.spb-industry-implementations__line::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 84px;
+  background: linear-gradient(282.35deg, rgba(255, 255, 255, 0) 4.93%, #FFFFFF 46.48%, rgba(255, 255, 255, 0) 96.26%); 
+  border-radius: 2px;
+  animation: spb-industry-implementations 5s linear infinite;
+}
+
+// .spb-industry-implementations__line--top::after{
+//   animation-delay: 1.6s;
+// }
+// .spb-industry-implementations__line--top::before{
+//   animation-delay: 2.6s;
+// }
+
+
+
+
+@keyframes spb-industry-implementations{
+  from { 
+    left: -3%;
+  }
+  to {
+    left: 100%;
+  }
+} 
 .spb-industry-implementations__logo{
   line-height: 53px;
   font-size: 42px;
   color: #FFFFFF;
   margin: 5% 0 5% 0;
 }
-.spb-industry-implementations__item{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 430px;
-  height: 375px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
+
+
 /* .spb-industry-implementations__item-content{
   display: flex;
   justify-content: space-between;
@@ -1168,7 +1241,7 @@ $font: "Arial";
   flex-direction: column;
   justify-content: space-between;
   width: 461px;
-  height: auto;
+  height: 42vh;
   margin-left: 5%;
   background: white;
   padding: 2%;
@@ -1222,9 +1295,7 @@ $font: "Arial";
   .spb-header__menu{
     width: 100%;
   }
-  .spb-industry-implementations__item-container{
-    justify-content: space-around;
-  }
+ 
   .spb-industry-implementations__item{
     width: 385px;
   }
@@ -1239,11 +1310,12 @@ $font: "Arial";
     color: #FFFFFF;
     margin-bottom: 2%;
   }
-  .spb-main-banner__1st_slide .spb-small-banner__cart-container{
+  .spb-main-banner__1st_slide .spb-main-banner__cart-container{
     width: 552px;
   }
   .spb-industry-implementations__item{
     width: 385px;
+  border: none;
   }
   .spb-career__text{
     width: 60%;
@@ -1281,7 +1353,7 @@ $font: "Arial";
     color: #FFFFFF;
     margin-bottom: 2%;
   }
-  .spb-main-banner__1st_slide .spb-small-banner__cart-container{
+  .spb-main-banner__1st_slide .spb-main-banner__cart-container{
     width: 430px;
   }
   .spb-logo{
@@ -1377,10 +1449,10 @@ $font: "Arial";
 }
 }
 @media (max-width:500px) {
-  .spb-main-banner__1st_slide .spb-small-banner__cart-container {
+  .spb-main-banner__1st_slide .spb-main-banner__cart-container {
     width: 350px;
   }
-  .spb-main-banner__1st_slide .spb-small-banner__cart-container {
+  .spb-main-banner__1st_slide .spb-main-banner__cart-container {
     display: flex;
     flex-direction: column;
     height: 43%;
