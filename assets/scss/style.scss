@@ -867,8 +867,9 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 70vh;
   background:url(/assets/img/career.png) no-repeat;
+  background-size: cover;
 }
 .spb-career__container{
   display: flex;
