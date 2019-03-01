@@ -53,13 +53,14 @@ $(function() {
     $('.spb-header__menu .spb-header__menu-item').hover(
       function () {
         $(this).addClass('hover');
+        $(".spb-header__menu .spb-header__menu-item").css({"color":"rgba(255, 255, 255, 0.5)"});
         $(".spb-header__bottom").addClass("spb-header__bottom_modal")
         $(".spb-header__menu_lvl-2").css({"opacity":"1"})  
-     
+        
       },
       function () {
         $(this).removeClass('hover'); 
- 
+        $(".spb-header__menu .spb-header__menu-item").css({"color":"white"});
       }
     )
     $(".spb-header__menu_lvl-2").mouseleave(function() {
