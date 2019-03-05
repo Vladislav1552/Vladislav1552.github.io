@@ -8,7 +8,7 @@ $(function() {
       nav: true,
       animateOut: 'fadeOut',
       mouseDrag: false,
-    
+      spb:0,
       
      
     });
@@ -67,4 +67,9 @@ $(function() {
         $(this).css({"opacity":"0"})  
         $(".spb-header__bottom").removeClass("spb-header__bottom_modal")
     })
+    $(".spb-header__top-qustionButton").click(function () {
+      $(".spb-main-banner__container-text").slideToggle("slow")
+    });
+
+ 
   });

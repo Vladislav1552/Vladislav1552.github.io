@@ -15,6 +15,7 @@ body {
 
 .spb-container {
   width: 80%;
+  max-width: 1520px;
 }
 
 .spb-logo {
@@ -49,6 +50,92 @@ body {
   letter-spacing: 0.05em;
   font-weight: 600;
   color: inherit;
+}
+
+.btn-reverse.btn-arrow {
+  background: #D16A16;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background-color: #D16A16;
+  color: white;
+  border: 2px solid #D16A16;
+  transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 400px) {
+  .btn-reverse.btn-arrow {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .btn-reverse.btn-arrow {
+    font-size: 1.1rem;
+  }
+}
+
+.btn-reverse.btn-arrow:hover {
+  background: #E87B22;
+  border-color: #E87B22;
+  color: #fff;
+}
+
+.btn-border {
+  background-color: transparent;
+  color: #1d1d1d;
+}
+
+.btn-arrow {
+  position: relative;
+  transition: background-color 300ms ease-out;
+}
+
+.btn-arrow span {
+  display: inline-block;
+  position: relative;
+  transition: all 300ms ease-out;
+  will-change: transform;
+}
+
+.btn-arrow:hover span {
+  -webkit-transform: translate3d(-1rem, 0, 0);
+  transform: translate3d(-1rem, 0, 0);
+}
+
+.btn-arrow svg {
+  position: absolute;
+  width: 1.1em;
+  right: 0px;
+  right: 0rem;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: all 300ms ease-out;
+  will-change: right, opacity;
+}
+
+.btn-arrow svg * {
+  stroke-width: 5;
+  stroke-color: transparent;
+}
+
+.btn-arrow:hover svg {
+  opacity: 1;
+  right: -1.5rem;
 }
 
 /* ___________ header__________________ */
@@ -158,11 +245,13 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: color 0.4s;
 }
 
 .spb-header__menu .spb-header__menu-item.hover {
   background: url(/assets/img/menu-hover.png) no-repeat;
   background-position: center 55px;
+  color: white !important;
 }
 
 .spb-header__menu_lvl-2 {
@@ -186,17 +275,16 @@ body {
 
 /* vector */
 .spb-vector {
+  width: 100vh;
+  height: 100vh;
   position: absolute;
-  height: 863px;
-  background: url(/assets/img/main-vector.svg) rgba(255, 255, 255, 0.2);
-  -webkit-filter: blur(15px);
-  filter: blur(15px);
-  -webkit-transform: rotate(4.9deg);
-  transform: rotate(4.9deg);
-  width: 320px;
-  -webkit-animation: vector 5s linear infinite;
-  animation: vector 5s linear infinite;
+  z-index: 2;
+  -webkit-animation: vector 60s linear infinite;
+  animation: vector 60s linear infinite;
   overflow: hidden;
+  top: -20%;
+  left: -13%;
+  color: white;
 }
 
 @-webkit-keyframes vector {
@@ -331,6 +419,8 @@ body {
 }
 
 .spb-main-banner__1st_slide {
+  display: flex;
+  justify-content: center;
   background: url(/assets/img/slide_1.jpg) no-repeat;
   height: 100%;
   width: 100%;
@@ -349,32 +439,68 @@ body {
   padding: 0;
   width: 660px;
   color: white;
-  position: absolute;
-  top: 26%;
-  left: 10%;
 }
 
-.spb-main-banner__1st_slide .spb-header__top-qustionButton {
-  display: flex !important;
-}
-
-.spb-main-banner__1st_slide .spb-small-banner__button {
+.spb-main-banner__1st_slide .spb-main-banner__button {
   width: 207px;
-  height: 65px;
+  height: 60px;
+  position: relative;
 }
 
-.spb-main-banner__1st_slide .spb-small-banner__text {
+.spb-main-banner__button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 231px;
+  height: 84px;
+  top: -9px;
+  left: -12px;
+  background: url(/assets/img/button-more-hover.png) no-repeat;
+  background-size: contain;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.spb-main-banner__button:hover:before {
+  opacity: 1;
+}
+
+.spb-main-banner__1st_slide .spb-main-banner__text {
   line-height: 28px;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.spb-main-banner__1st_slide .spb-small-banner__logo {
+.spb-main-banner__1st_slide .spb-main-banner__logo {
+  line-height: 48px;
+  font-size: 36px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 48px;
+  font-size: 36px;
+  font-weight: 800;
+  color: #FFFFFF;
   line-height: 48px;
   font-size: 36px;
   font-weight: 800;
   color: #FFFFFF;
   margin-bottom: 2%;
+}
+
+.spb-main-banner__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.spb-main-banner__container-text {
+  display: none;
+  height: 100%;
+}
+
+.spb-main-banner__js-container {
+  min-height: 150px;
 }
 
 .spb-main-banner__2st_slide {
@@ -427,10 +553,6 @@ body {
   transition-timing-function: ease-in-out;
 }
 
-.spb-small-banner__left-cart:hover, .spb-small-banner__right-cart:hover {
-  background: url(/assets/img/industry-implementations.png);
-}
-
 .spb-small-banner__left-cart:hover {
   color: white;
 }
@@ -451,6 +573,10 @@ body {
 .spb-small-banner__right-cart {
   color: white;
   background: url(/assets/img/заказные-разработки.png);
+}
+
+.spb-small-banner__left-cart:hover, .spb-small-banner__right-cart:hover {
+  background: url(/assets/img/industry-implementations.png);
 }
 
 .spb-small-banner__cart-container {
@@ -963,9 +1089,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: auto;
   background: url(/assets/img/career.png) no-repeat;
   background-size: cover;
+  min-height: 600px;
 }
 
 .spb-career__container {
@@ -974,7 +1101,10 @@ body {
   align-items: center;
   flex-direction: column;
   color: gainsboro;
-  height: 70%;
+}
+
+.spb-career__item {
+  margin-bottom: 1.8%;
 }
 
 .spb-career__icon {
@@ -997,7 +1127,7 @@ body {
   font-size: 1em;
   text-align: center;
   letter-spacing: 0.08em;
-  width: 40%;
+  width: 51%;
 }
 
 .spb-career__button {
@@ -1499,11 +1629,15 @@ body {
 /* spb-contact */
 .spb-contact {
   width: 100%;
-  height: 60vh;
+  min-height: 550px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.spb-contact__container {
+  z-index: 2;
 }
 
 .spb-contact__map {
@@ -1518,12 +1652,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 461px;
-  height: 42vh;
-  margin-left: 5%;
+  width: 400px;
+  height: auto;
   background: white;
   padding: 2%;
   z-index: 2;
+  overflow: hidden;
 }
 
 .spb-contact__logo {
@@ -1535,14 +1669,31 @@ body {
 }
 
 .spb-contact__item {
-  height: 118px;
+  height: auto;
   background: white;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-self: flex-start;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+  line-height: 32px;
+  position: relative;
+}
+
+.spb-contact__item::after {
+  content: "";
+  display: block;
+  bottom: 0;
+  width: 150%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  left: -25%;
+}
+
+.spb-contact__item:last-child, .spb-contact__item:last-child .spb-contact__about {
+  margin-bottom: 0;
 }
 
 .spb-contact__link {
@@ -1557,6 +1708,10 @@ body {
   display: flex;
   font-size: 16px;
   letter-spacing: 0.05em;
+}
+
+.spb-contact__about:last-child {
+  margin-bottom: 15px;
 }
 
 .spb-contact__about b {
@@ -1694,10 +1849,11 @@ body {
   }
   .spb-contact__map {
     position: relative;
+    height: 325px;
   }
   .spb-contact {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1706,19 +1862,16 @@ body {
     overflow: hidden;
   }
   .spb-contact__item {
-    height: 175px;
-    padding-left: 5%;
     width: 100%;
   }
-  .spb-contact__logo {
-    padding-left: 5%;
+  .spb-contact__container {
+    margin: 0;
   }
   .spb-contact__form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: auto;
     background: white;
     padding: 8%;
     z-index: 1;
@@ -1771,8 +1924,13 @@ body {
   .spb-history__logo::before {
     bottom: -15%;
   }
+  .spb-career__icon {
+    width: 120px;
+    height: 99px;
+  }
   .spb-career__logo {
     font-size: 1.5em;
+    line-height: 1.5em;
   }
   .spb-career__container {
     height: 80%;

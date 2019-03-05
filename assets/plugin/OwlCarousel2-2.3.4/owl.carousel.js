@@ -15,6 +15,11 @@
  * @todo Test Zepto
  * @todo stagePadding calculate wrong active classes
  */
+const CustomProperty ={
+	spb_animate_timer:800, //Скорость шторки
+	spb2:0
+}
+
 ;(function($, window, document, undefined) {
 
 	/**
@@ -24,8 +29,9 @@
 	 * @param {HTMLElement|jQuery} element - The element to create the carousel for.
 	 * @param {Object} [options] - The options
 	 */
-	function Owl(element, options) {
 
+	function Owl(element, options) {
+	
 		/**
 		 * Current settings for the carousel.
 		 * @public
@@ -177,6 +183,7 @@
 
 		this.setup();
 		this.initialize();
+
 	}
 
 	/**
@@ -388,7 +395,7 @@
 			var iterator = this._coordinates.length,
 				grid = !this.settings.autoWidth,
 				items = this.$stage.children();
-				console.log(items)
+				
 			if (grid && cache.items.merge) {
 				while (iterator--) {
 					cache.css.width = this._widths[this.relative(iterator)];
@@ -2119,6 +2126,7 @@
 	/**
 	 * Updates the view.
 	 */
+
 	AutoHeight.prototype.update = function() {
 		var start = this._core._current,
 			end = start + this._core.settings.items,
@@ -2998,12 +3006,19 @@
 	 * Initializes the layout of the plugin and extends the carousel.
 	 * @protected
 	 */
+
+	
 	Navigation.prototype.initialize = function() {
 		function background(){
 			var background_slid = $("#big-slider .owl-item.active").next().children().attr('class').split('item').join('');
 			$('.spb-main-banner .owl-next').attr('class',`owl-next ${background_slid}`)
-		
+
 		}
+		if ($(".spb-main-banner__container-text").css("display") == "none") {
+			$(".spb-main-banner__container-text").slideToggle(800)
+		}
+		
+		$(".spb-main-banner__container-text").hide()
 		background();
 		// var background_slide = $("#big-slider .owl-item.active").next().children().attr('class').split('item').join('');
 		// $(".spb-main-banner .owl-next").addClass(`${background_slide}`)
@@ -3030,13 +3045,15 @@
 			.on('click', $.proxy(function(e) {
 				$("#big-slider").addClass('ops')
 				background()
-		
+				$(".spb-main-banner__container-text").hide()
+
+
 				setTimeout(function() {
 					$("#big-slider").removeClass('ops')
-					
+		
 					background()
 		
-				   }, 800);
+				}, CustomProperty.spb_animate_timer);
 				this.next(settings.navSpeed);
 			}, this));
 
@@ -3055,10 +3072,18 @@
 
 		this._controls.$absolute.on('click', 'button', $.proxy(function(e) {
 			$("#big-slider").addClass('ops')
-	
+		
 			setTimeout(function() {
 				$("#big-slider").removeClass('ops')
-			   }, 800);
+				$(".spb-main-banner__container-text").hide()
+			}, CustomProperty.spb_animate_timer);
+			setTimeout(function () {
+				$("#big-slider").removeClass('ops')
+				if ($(".spb-main-banner__container-text").css("display") == "none") {
+					$(".spb-main-banner__container-text").slideToggle(400)
+				}
+			}, CustomProperty.spb_animate_timer+700);
+			
 			var index = $(e.target).parent().is(this._controls.$absolute)
 				? $(e.target).index() : $(e.target).parent().index();
 
