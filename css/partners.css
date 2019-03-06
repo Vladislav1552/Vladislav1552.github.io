@@ -1,0 +1,33 @@
+.spb-main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.partners__container {
+  display: flex;
+  flex-direction: column;
+  line-height: 26px;
+  font-size: 15px;
+  color: rgba(49, 57, 72, 0.7);
+  width: 48%;
+}
+
+.spb-main-content__title {
+  font-size: 32px;
+  color: #313948;
+  font-weight: 600;
+}
+
+.spb-main-content__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.spb-main-content__item-container {
+  display: flex;
+  justify-content: space-between;
+}
