@@ -13,6 +13,8 @@ $(function() {
      
     });
   });
+
+
   $(function() {
     // Owl Carousel
     var owl = $("#spb-js-little-slider");

@@ -444,6 +444,8 @@ const CustomProperty ={
 
 			this.$stage.children('.active').removeClass('active');
 			this.$stage.children(':eq(' + matches.join('), :eq(') + ')').addClass('active');
+			
+	
 
 			this.$stage.children('.center').removeClass('center');
 			if (this.settings.center) {
@@ -3014,11 +3016,11 @@ const CustomProperty ={
 			$('.spb-main-banner .owl-next').attr('class',`owl-next ${background_slid}`)
 
 		}
-		if ($(".spb-main-banner__container-text").css("display") == "none") {
-			$(".spb-main-banner__container-text").slideToggle(800)
-		}
+		// if ($(".spb-main-banner__container-text").css("display") == "none") {
+		// 	$(".spb-main-banner__container-text").slideToggle(800)
+		// }
 		
-		$(".spb-main-banner__container-text").hide()
+		//$(".spb-main-banner__container-text").hide()
 		background();
 		// var background_slide = $("#big-slider .owl-item.active").next().children().attr('class').split('item').join('');
 		// $(".spb-main-banner .owl-next").addClass(`${background_slide}`)
@@ -3045,7 +3047,7 @@ const CustomProperty ={
 			.on('click', $.proxy(function(e) {
 				$("#big-slider").addClass('ops')
 				background()
-				$(".spb-main-banner__container-text").hide()
+			//	$(".spb-main-banner__container-text").hide()
 
 
 				setTimeout(function() {
@@ -3075,14 +3077,14 @@ const CustomProperty ={
 		
 			setTimeout(function() {
 				$("#big-slider").removeClass('ops')
-				$(".spb-main-banner__container-text").hide()
+				//$(".spb-main-banner__container-text").hide()
 			}, CustomProperty.spb_animate_timer);
 			setTimeout(function () {
 				$("#big-slider").removeClass('ops')
-				if ($(".spb-main-banner__container-text").css("display") == "none") {
-					$(".spb-main-banner__container-text").slideToggle(400)
-				}
-			}, CustomProperty.spb_animate_timer+700);
+				// if ($(".spb-main-banner__container-text").css("display") == "none") {
+				// 	$(".spb-main-banner__container-text").slideToggle(400)
+				// }
+			}, CustomProperty.spb_animate_timer+200);
 			
 			var index = $(e.target).parent().is(this._controls.$absolute)
 				? $(e.target).index() : $(e.target).parent().index();
