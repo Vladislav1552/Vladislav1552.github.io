@@ -989,6 +989,7 @@ body {
   width: 150%;
   height: 1px;
   background: rgba(255, 255, 255, 0.15);
+  top: 1px;
 }
 
 .spb-industry-implementations__line--top {
@@ -1631,7 +1632,7 @@ body {
   width: 100%;
   min-height: 550px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
 }
@@ -1658,6 +1659,9 @@ body {
   padding: 2%;
   z-index: 2;
   overflow: hidden;
+  margin-left: -6%;
+  position: absolute;
+  left: 16%;
 }
 
 .spb-contact__logo {
@@ -1721,10 +1725,53 @@ body {
 
 .spb-footer {
   width: 100%;
-  height: 15%;
-  background: url(/assets/img/razrab.png) #355F25 no-repeat;
-  background-size: contain;
-  background-position: center;
+  height: 190px;
+  background: #F5F5F5;
+}
+
+.spb-footer__top {
+  width: 100%;
+  height: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.spb-footer__top-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spb-footer__text {
+  font-size: 0.85vw;
+  letter-spacing: 0.05em;
+  color: #212121;
+  opacity: 0.7;
+}
+
+.spb-footer__top-title {
+  font-weight: bold;
+  opacity: 1;
+  color: black;
+}
+
+.spb-footer__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+.spb-footer__bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spb-footer__bottom-politics {
+  margin-left: -47%;
 }
 
 @media (max-width: 1350px) {
@@ -1772,6 +1819,19 @@ body {
   }
   .spb-history__item-text {
     font-size: 1.5em;
+  }
+  .spb-footer__text {
+    font-size: 16px;
+  }
+  .spb-footer__top-phone, .spb-footer__top-email, .spb-footer__bottom-name {
+    display: none;
+  }
+  .spb-footer__bottom-container {
+    justify-content: flex-end;
+  }
+  .spb-footer__bottom-politics {
+    margin-left: 0;
+    display: none;
   }
 }
 
@@ -1851,6 +1911,11 @@ body {
     position: relative;
     height: 325px;
   }
+  .ymaps_https___api_maps_yandex_ru_2_1_72_505029545354islands_icon___1E98FF_34x41_1551779533761 {
+    display: block;
+    background-image: url(/assets/img/map_icon.png);
+    background-size: 34px 41px;
+  }
   .spb-contact {
     width: 100%;
     height: auto;
@@ -1877,9 +1942,21 @@ body {
     z-index: 1;
     margin-left: 0;
     padding: 5% 0 5% 0;
+    position: relative;
+    left: 3%;
   }
   .spb-small-banner__left-cart, .spb-small-banner__right-cart {
     margin: 10% 0 0% 0;
+  }
+  .spb-footer__bottom-name {
+    display: block;
+  }
+  .spb-footer__bottom-container {
+    justify-content: space-between;
+  }
+  .spb-footer__bottom-politics {
+    margin-left: 0;
+    display: block;
   }
 }
 
