@@ -9,7 +9,14 @@ blockquote, input {
   list-style-type: none;
 }
 body {
-  height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items:flex-end;
+}
+.spb-main{
+    flex-direction: column;
+    justify-content: space-between;
 }
 .spb-container {
   width:80%;
@@ -17,7 +24,7 @@ body {
 }
 
 .spb-logo {
-  background: url(/assets/img/logo.png) no-repeat;
+  background: url(../img/logo.png) no-repeat;
   width: 154px;
   height: 58px;
 }
@@ -35,7 +42,7 @@ position: relative;
   position: absolute;
   width: 29.2px;
   height: 29.2px;
-  background: url(/assets/img/Subtract-orange.png);
+  background: url(../img/Subtract-orange.png);
   left: 0;
   top: 0;
   }
@@ -130,6 +137,7 @@ position: relative;
 /* ___________ header__________________ */
 .spb-header {
   background: #FFFFFF;
+  width: 100%;
 }
 
 /* top */
@@ -173,7 +181,7 @@ position: relative;
 }
 
 .spb-header__top-loop {
-  background: url(/assets/img/search.svg) no-repeat;
+  background: url(../img/search.svg) no-repeat;
   width: 32px;
   height: 27px;
 }
@@ -185,7 +193,7 @@ position: relative;
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .spb-header__bottom::after{
   content: "";
@@ -213,7 +221,7 @@ position: relative;
 
 .spb-header__menu {
   height: 71px;
-  width: 67%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -242,7 +250,7 @@ position: relative;
   transition:color 0.4s;
 }
 .spb-header__menu .spb-header__menu-item.hover {
-  background: url(/assets/img/menu-hover.png) no-repeat;
+  background: url(../img/menu-hover.png) no-repeat;
   background-position: center 55px;
     color:white !important;
   
@@ -260,7 +268,7 @@ position: relative;
 .spb-header__top-phone-menu{
   width: 50px;
   height: 50px;
-  background: url(/assets/img/menu-phone.png) no-repeat;
+  background: url(../img/menu-phone.png) no-repeat;
   background-size: cover;
   display: none;
 }
@@ -341,7 +349,7 @@ position: relative;
 .spb-main-banner .owl-next span::after{
   content: "";
   position: absolute;
-  background: url(/assets/img/arrow-slider.png) no-repeat;
+  background: url(../img/arrow-slider.png) no-repeat;
   width: 12px;
   height: 12px;
   top: 8px;
@@ -457,7 +465,7 @@ position: relative;
     height: 84px;
     top: -9px;
     left: -12px;
-    background: url(/assets/img/button-more-hover.png) no-repeat;
+    background: url(../img/button-more-hover.png) no-repeat;
     background-size: contain;
     opacity: 0;
     transition: 0.6s;
@@ -548,7 +556,7 @@ position: relative;
 
 
 .spb-main-banner__2st_slide{
-  background: url(/assets/img/career.png) no-repeat;
+  background: url(../img/career.png) no-repeat;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -557,7 +565,7 @@ position: relative;
   position: relative;
 }
 .spb-main-banner__3st_slide{
-  background: url(/assets/img/contact.png) no-repeat;
+  background: url(../img/contact.png) no-repeat;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -599,22 +607,22 @@ position: relative;
   color: white;
 }
 .spb-small-banner__left-cart:hover .spb-small-banner__left-button::before {
-  background: url(/assets/img/Subtract-white.png);
+  background: url(../img/Subtract-white.png);
 }
 
 .spb-small-banner__left-cart {
   color: #212121;
-  background: url(/assets/img/spb-small-banner__left-cart.png);
+  background: url(../img/spb-small-banner__left-cart.png);
 }
 .spb-small-banner__right-button::before{
-  background: url(/assets/img/Subtract-white.png);
+  background: url(../img/Subtract-white.png);
 }
 .spb-small-banner__right-cart {
   color: white;
-  background: url(/assets/img/заказные-разработки.png);
+  background: url(../img/заказные-разработки.png);
 }
 .spb-small-banner__left-cart:hover, .spb-small-banner__right-cart:hover {
-  background: url(/assets/img/industry-implementations.png);
+  background: url(../img/industry-implementations.png);
 }
 .spb-small-banner__cart-container{
   display: flex;
@@ -687,7 +695,7 @@ position: relative;
 }
 
 .spb-little-slider.owl-carousel .owl-item:hover {
-  background: url(/assets/img/little-slider__item-image-hover.png);
+  background: url(../img/little-slider__item-image-hover.png);
   color: white !important;
   
 }
@@ -706,7 +714,7 @@ position: relative;
   width: 38.02px;
   height: 38.02px;
   margin: 0;
-  background: url(/assets/img/spb-little-slider-prev.png) no-repeat;
+  background: url(../img/spb-little-slider-prev.png) no-repeat;
   background-size: cover;
   background-size: 80%;
   background-position: 0;
@@ -716,7 +724,7 @@ position: relative;
   width: 38.02px;
   height: 38.02px;
   margin: 0;
-  background: url(/assets/img/spb-little-slider-next.png) no-repeat;
+  background: url(../img/spb-little-slider-next.png) no-repeat;
   background-size: cover;
   background-size: 80%;
   background-position: 0;
@@ -727,12 +735,12 @@ position: relative;
 }
 
 .spb-little-slider .owl-nav .owl-prev:hover, .spb-little-slider .owl-nav .owl-prev:focus {
-  background: url(/assets/img/owl-prevfocus-hover.png) no-repeat;
+  background: url(../img/owl-prevfocus-hover.png) no-repeat;
   background-size: cover;
 }
 
 .spb-little-slider .owl-nav .owl-next:hover, .spb-little-slider .owl-nav .owl-next:focus {
-  background: url(/assets/img/owl-nextfocus-hover.png) no-repeat;
+  background: url(../img/owl-nextfocus-hover.png) no-repeat;
   background-size: cover;
 }
 
@@ -757,25 +765,25 @@ position: relative;
 .spb-little-slider__item-image--calculators {
   width: 208px;
   height: 128px;
-  background: url(/assets/img/calculators.png) no-repeat;
+  background: url(../img/calculators.png) no-repeat;
 }
 
 .spb-little-slider__item-image--onboard_pc {
   width: 175px;
   height: 132px;
-  background: url(/assets/img/onboard_pc.png) no-repeat;
+  background: url(../img/onboard_pc.png) no-repeat;
 }
 
 .spb-little-slider__item-image--panel_pc {
   width: 169px;
   height: 128px;
-  background: url(/assets/img/panel_pc.png) no-repeat;
+  background: url(../img/panel_pc.png) no-repeat;
 }
 
 .spb-little-slider__item-image--monoblocks {
   width: 151px;
   height: 119px;
-  background: url(/assets/img/monoblocks.png) no-repeat;
+  background: url(../img/monoblocks.png) no-repeat;
 }
 /* spb-history */
 .spb-history{
@@ -835,20 +843,20 @@ position: relative;
   background-position: center;
 }
 .spb-history__item-vector--object1{
-  background: url(/assets/img/item-vector-object1.svg) no-repeat ;
+  background: url(../img/item-vector-object1.svg) no-repeat ;
   background-position: center;
   background-size: contain;
   animation: item-vector1 25s paused linear infinite;
 }
 .spb-history__item-vector--object2{
 
-  background: url(/assets/img/item-vector-object1.svg) no-repeat ;
+  background: url(../img/item-vector-object1.svg) no-repeat ;
   background-position: center;
   background-size: contain;
   animation: item-vector2 25s paused linear infinite;
 }
 .spb-history__item-vector--object3{
-  background: url(/assets/img/item-vector-object1.svg) no-repeat ;
+  background: url(../img/item-vector-object1.svg) no-repeat ;
   background-position: center;
   background-size: contain;
   animation: item-vector3 25s paused linear infinite;
@@ -902,7 +910,7 @@ position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(/assets/img/industry-implementations.png);
+  background: url(../img/industry-implementations.png);
   overflow: hidden;
 }
 
@@ -1009,32 +1017,32 @@ position: relative;
   flex-direction: column;
 } */
 .spb-industry-implementations__icon_locomotive{
-  background: url(/assets/img/locomotive.png) no-repeat;
+  background: url(../img/locomotive.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 .spb-industry-implementations__icon_atom{
-  background: url(/assets/img/atom.png) no-repeat;
+  background: url(../img/atom.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 .spb-industry-implementations__icon_oil{
-  background: url(/assets/img/oil.png) no-repeat;
+  background: url(../img/oil.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 .spb-industry-implementations__icon_locomotive{
-  background: url(/assets/img/locomotive.png) no-repeat;
+  background: url(../img/locomotive.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 .spb-industry-implementations__icon_medick{
-  background: url(/assets/img/medick.png) no-repeat;
+  background: url(../img/medick.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 .spb-industry-implementations__icon_spec{
-  background: url(/assets/img/spec.png) no-repeat;
+  background: url(../img/spec.png) no-repeat;
   width: 92px;
   height: 90px;
 }
@@ -1056,9 +1064,10 @@ position: relative;
   justify-content: center;
   align-items: center;
   height: auto;
-  background:url(/assets/img/career.png) no-repeat;
+  background:url(../img/career.png) no-repeat;
   background-size:cover;
   min-height: 600px;
+  width: 100%;
 }
 .spb-career__container{
     display: flex;
@@ -1073,7 +1082,7 @@ position: relative;
 .spb-career__icon{
   width: 180px;
   height: 125px;
-  background:url(/assets/img/career__icon.png) no-repeat;
+  background:url(../img/career__icon.png) no-repeat;
   background-size: contain;
 }
 .spb-career__logo{
@@ -1427,7 +1436,7 @@ $font: "Arial";
 .spb-contact__map{
   width: 100%;
   height: 100%;
-  background: url(/assets/img/contact.png) no-repeat;
+  background: url(../img/contact.png) no-repeat;
   position: absolute;
   background-size: cover;
 }
@@ -1502,13 +1511,13 @@ $font: "Arial";
 
 .spb-footer{
   width: 100%;
-  height: 190px;
+  height: 191px;
   background: #F5F5F5;
 }
 
 .spb-footer__top{
   width: 100%;
-  height:115px; 
+  height:114px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1689,7 +1698,7 @@ $font: "Arial";
 }
 .ymaps_https___api_maps_yandex_ru_2_1_72_505029545354islands_icon___1E98FF_34x41_1551779533761 {
   display: block;
-  background-image: url(/assets/img/map_icon.png);
+  background-image: url(../img/map_icon.png);
   background-size: 34px 41px;
 }
 
