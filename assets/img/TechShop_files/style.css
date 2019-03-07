@@ -228,7 +228,7 @@ body {
 
 .spb-header__menu {
   height: 71px;
-  width: 100%;
+  width: 67%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -484,7 +484,7 @@ body {
   height: 84px;
   top: -9px;
   left: -12px;
-  background: url(../img/button-more-hover.png) no-repeat;
+  background: url(/assets/img/button-more-hover.png) no-repeat;
   background-size: contain;
   opacity: 0;
   transition: 0.6s;
@@ -581,7 +581,7 @@ body {
 }
 
 .spb-main-banner__2st_slide {
-  background: url(../img/career.png) no-repeat;
+  background: url(/assets/img/career.png) no-repeat;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -591,7 +591,7 @@ body {
 }
 
 .spb-main-banner__3st_slide {
-  background: url(../img/contact.png) no-repeat;
+  background: url(/assets/img/contact.png) no-repeat;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -636,25 +636,25 @@ body {
 }
 
 .spb-small-banner__left-cart:hover .spb-small-banner__left-button::before {
-  background: url(../img/Subtract-white.png);
+  background: url(/assets/img/Subtract-white.png);
 }
 
 .spb-small-banner__left-cart {
   color: #212121;
-  background: url(../img/spb-small-banner__left-cart.png);
+  background: url(/assets/img/spb-small-banner__left-cart.png);
 }
 
 .spb-small-banner__right-button::before {
-  background: url(../img/Subtract-white.png);
+  background: url(/assets/img/Subtract-white.png);
 }
 
 .spb-small-banner__right-cart {
   color: white;
-  background: url(../img/заказные-разработки.png);
+  background: url(/assets/img/заказные-разработки.png);
 }
 
 .spb-small-banner__left-cart:hover, .spb-small-banner__right-cart:hover {
-  background: url(../img/industry-implementations.png);
+  background: url(/assets/img/industry-implementations.png);
 }
 
 .spb-small-banner__cart-container {
@@ -728,7 +728,7 @@ body {
 }
 
 .spb-little-slider.owl-carousel .owl-item:hover {
-  background: url(../img/little-slider__item-image-hover.png);
+  background: url(/assets/img/little-slider__item-image-hover.png);
   color: white !important;
 }
 
@@ -746,7 +746,7 @@ body {
   width: 38.02px;
   height: 38.02px;
   margin: 0;
-  background: url(../img/spb-little-slider-prev.png) no-repeat;
+  background: url(/assets/img/spb-little-slider-prev.png) no-repeat;
   background-size: cover;
   background-size: 80%;
   background-position: 0;
@@ -756,7 +756,7 @@ body {
   width: 38.02px;
   height: 38.02px;
   margin: 0;
-  background: url(../img/spb-little-slider-next.png) no-repeat;
+  background: url(/assets/img/spb-little-slider-next.png) no-repeat;
   background-size: cover;
   background-size: 80%;
   background-position: 0;
@@ -767,12 +767,12 @@ body {
 }
 
 .spb-little-slider .owl-nav .owl-prev:hover, .spb-little-slider .owl-nav .owl-prev:focus {
-  background: url(../img/owl-prevfocus-hover.png) no-repeat;
+  background: url(/assets/img/owl-prevfocus-hover.png) no-repeat;
   background-size: cover;
 }
 
 .spb-little-slider .owl-nav .owl-next:hover, .spb-little-slider .owl-nav .owl-next:focus {
-  background: url(../img/owl-nextfocus-hover.png) no-repeat;
+  background: url(/assets/img/owl-nextfocus-hover.png) no-repeat;
   background-size: cover;
 }
 
@@ -797,25 +797,25 @@ body {
 .spb-little-slider__item-image--calculators {
   width: 208px;
   height: 128px;
-  background: url(../img/calculators.png) no-repeat;
+  background: url(/assets/img/calculators.png) no-repeat;
 }
 
 .spb-little-slider__item-image--onboard_pc {
   width: 175px;
   height: 132px;
-  background: url(../img/onboard_pc.png) no-repeat;
+  background: url(/assets/img/onboard_pc.png) no-repeat;
 }
 
 .spb-little-slider__item-image--panel_pc {
   width: 169px;
   height: 128px;
-  background: url(../img/panel_pc.png) no-repeat;
+  background: url(/assets/img/panel_pc.png) no-repeat;
 }
 
 .spb-little-slider__item-image--monoblocks {
   width: 151px;
   height: 119px;
-  background: url(../img/monoblocks.png) no-repeat;
+  background: url(/assets/img/monoblocks.png) no-repeat;
 }
 
 /* spb-history */
@@ -882,7 +882,7 @@ body {
 }
 
 .spb-history__item-vector--object1 {
-  background: url(../img/item-vector-object1.svg) no-repeat;
+  background: url(/assets/img/item-vector-object1.svg) no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-animation: item-vector1 25s paused linear infinite;
@@ -890,7 +890,7 @@ body {
 }
 
 .spb-history__item-vector--object2 {
-  background: url(../img/item-vector-object1.svg) no-repeat;
+  background: url(/assets/img/item-vector-object1.svg) no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-animation: item-vector2 25s paused linear infinite;
@@ -898,7 +898,7 @@ body {
 }
 
 .spb-history__item-vector--object3 {
-  background: url(../img/item-vector-object1.svg) no-repeat;
+  background: url(/assets/img/item-vector-object1.svg) no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-animation: item-vector3 25s paused linear infinite;
@@ -1009,7 +1009,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(../img/industry-implementations.png);
+  background: url(/assets/img/industry-implementations.png);
   overflow: hidden;
 }
 
@@ -1117,37 +1117,37 @@ body {
   flex-direction: column;
 } */
 .spb-industry-implementations__icon_locomotive {
-  background: url(../img/locomotive.png) no-repeat;
+  background: url(/assets/img/locomotive.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_atom {
-  background: url(../img/atom.png) no-repeat;
+  background: url(/assets/img/atom.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_oil {
-  background: url(../img/oil.png) no-repeat;
+  background: url(/assets/img/oil.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_locomotive {
-  background: url(../img/locomotive.png) no-repeat;
+  background: url(/assets/img/locomotive.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_medick {
-  background: url(../img/medick.png) no-repeat;
+  background: url(/assets/img/medick.png) no-repeat;
   width: 92px;
   height: 90px;
 }
 
 .spb-industry-implementations__icon_spec {
-  background: url(../img/spec.png) no-repeat;
+  background: url(/assets/img/spec.png) no-repeat;
   width: 92px;
   height: 90px;
 }
@@ -1169,7 +1169,7 @@ body {
   justify-content: center;
   align-items: center;
   height: auto;
-  background: url(../img/career.png) no-repeat;
+  background: url(/assets/img/career.png) no-repeat;
   background-size: cover;
   min-height: 600px;
   width: 100%;
@@ -1190,7 +1190,7 @@ body {
 .spb-career__icon {
   width: 180px;
   height: 125px;
-  background: url(../img/career__icon.png) no-repeat;
+  background: url(/assets/img/career__icon.png) no-repeat;
   background-size: contain;
 }
 
