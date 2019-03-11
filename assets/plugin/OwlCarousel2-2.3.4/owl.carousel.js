@@ -3013,8 +3013,9 @@ const CustomProperty ={
 	Navigation.prototype.initialize = function() {
 		function background(){
 			var background_slid = $("#big-slider .owl-item.active").next().children().attr('class').split('item').join('');
+			//var background_slid2 = $("#big-slider .item-image").attr('src').split('item').join('');
 			$('.spb-main-banner .owl-next').attr('class',`owl-next ${background_slid}`)
-
+			//$('.spb-main-banner .owl-next').css('background', `url(${background_slid})`)
 		}
 		// if ($(".spb-main-banner__container-text").css("display") == "none") {
 		// 	$(".spb-main-banner__container-text").slideToggle(800)
